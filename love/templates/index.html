@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
 	<title>
-		MovieRecommender
+		MyValentine
 	</title>
 	<link href="static/css/bootstrap.min.css" rel="stylesheet">
 	<style>
@@ -51,20 +51,41 @@
 		<div class="form-group">
     	<label for="rating">movies of rating </label>
 		<input type="text" class="form-control" id="rating" placeholder="rating here...">
-		</div> -->
+		</div>
 		<div class="form-group">
     	<label for="rating">Can you find </label>
 		<input type="text" class="form-control" id="inputquery" name="query" placeholder="top 20 movies ">
-		</div> 
-		<input type="submit" class="btn btn-primary" value="?" >
+		</div>  -->
+		<input type="text" class="form-control" name='name' placeholder="your name">
+		
+		<select class="form-control" name='branch'>
+  <option>CS</option>
+  <option>IT</option>
+  <option>ME</option>
+  <option>EE</option>
+  <option>EC</option>
+   <option>IC</option>
+    <option>CE</option>
+     <option>MT</option>
+</select>
+		<input type="text" class="form-control" name="email" placeholder="email">
+		<input type="text" class="form-control" name="cname" placeholder="crush name">
+		
+		<select class="form-control" name='cbranch'>
+  <option>CS</option>
+  <option>IT</option>
+  <option>ME</option>
+  <option>EE</option>
+  <option>EC</option>
+   <option>IC</option>
+    <option>CE</option>
+     <option>MT</option>
+</select>
+		<input type="submit" class="btn btn-primary" value="Submit" >
 		
 		
 	</form>
-	Eg :top 20 movie (max 250).
-	<p id="movielist">
-	{% for each in movies %}
-{{each.title}}
-{% endfor %}</p>
+	
 </div>
 </body>
 </html>
