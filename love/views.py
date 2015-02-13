@@ -20,5 +20,12 @@ def index(request):
 		newCrush=Crush(name=name,branch=branch,email=email,cname=cname,cbranch=cbranch)
 		newCrush.save()
 		#find the crush 
+		sendmail=False
 		existCrush =  Crush.objects.filter(name=cname,branch=cbranch,cname=name,cbranch=branch)
+		if existCrush:
+			sendmail=True
+			email1=email
+			for i in existCrush:
+				email2=i.email
+			# send mail to both of them
 	return render_to_response('index.html',{'crush':existCrush},context_instance=RequestContext(request))
