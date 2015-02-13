@@ -72,10 +72,10 @@ STATICFILES_DIRS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myconotesdb',
-        'USER':'tj',
-        'PASSWORD':'gameover',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+        'USER':'',
+        'PASSWORD':'',
     }
 }
 
@@ -96,9 +96,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-TEMPLATE_DIRS = [(os.path.join(os.path.abspath(os.path.dirname(os.path.dirname(__file__))), 'moviestemplates'))]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATIC_ROOT = 'staticfiles'  #comment for Heroku
+STATIC_ROOT = 'static'  #comment for Heroku
 #STATIC_ROOT = 'staticfiles'        #uncomment for Heroku
 STATIC_URL = '/static/'
+TEMPLATE_DIRS = (
+    os.path.join(os.path.abspath(os.path.dirname(os.path.dirname(__file__))), \
+        'myvalentine/templates'),
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+)
+STATICFILES_DIRS = (
+                os.path.join(BASE_DIR, 'staticfiles'),
+    # Put strings here, like "/home/html/static" or "C:/www /django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+)
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'loveatjss@gmail.com'
+EMAIL_HOST_PASSWORD = 'passwordincorrect'

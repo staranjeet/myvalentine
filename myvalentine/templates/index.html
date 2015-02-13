@@ -1,0 +1,121 @@
+
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>JSS Love</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/static/css/bootstrap.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+    <link href="/static/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+
+<div class="container">
+ 
+<!-- Forms
+================================================== -->
+<section id="forms">
+  <!-- <div class="page-header">
+    <h2><img src="logo.png" width="400px"; height="150px" align="right"> </h2>
+  </div>
+ -->
+ <div class="row">
+ 	 <div class="col-lg-7">
+ 	 <h2><img src="/static/logo.png" width="400px"; height="150px" > </h2>
+ 	 <br> <img src="/static/heart.gif" weight="150" width="150" style="margin-left:33%"><br>
+ 	 <img src="/static/Untitled-4.gif" height="250" width="250"> <img src="/static/Untitled-5.gif" weight="250" width="250">
+ 	 </div>
+ 
+    <div class="col-lg-5 reg" style="margin-top:15px";>
+      
+
+       <h3 style="font-size:32px"><b>Register here</b></h3>
+      <form class="form-horizontal well" action="/" method="post">
+        {% csrf_token %}
+        <fieldset>
+          
+          <div class="control-group">
+            <label class="control-label" for="input01">User name</label>
+            <div class="controls">
+              <input type="text" class="form-control input-xlarge" id="input01" name="name">
+              
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="select01">Branch</label>
+            <div class="controls">
+              <select id="select01" class="form-control" name ="branch">
+                <option>CSE</option>
+  				<option>IT</option>
+  				<option>ME</option>
+ 				<option>EE</option>
+  				<option>EC</option>
+   				<option>IC</option>
+    			<option>CE</option>
+     			<option>MT</option>
+               
+              </select>
+            </div>
+          </div>
+
+           <div class="control-group">
+            <label class="control-label" for="input01">Email id</label>
+            <div class="controls">
+              <input type="text" class="form-control input-xlarge" id="input01" name="email">
+              
+            </div>
+          </div>
+         
+          <div class="control-group">
+            <label class="control-label" for="input01">Crush Name</label>
+            <div class="controls">
+              <input type="text" class="form-control input-xlarge" id="input01" name="cname">
+              
+            </div>
+          </div>
+
+<div class="control-group">
+            <label class="control-label" for="select01">Crush's Branch</label>
+            <div class="controls">
+              <select id="select01" class="form-control" name="cbranch">
+                <option>Unknown</option>
+                <<option>CSE</option>
+  				<option>IT</option>
+  				<option>ME</option>
+ 				<option>EE</option>
+  				<option>EC</option>
+   				<option>IC</option>
+    			<option>CE</option>
+     			<option>MT</option>
+               
+              </select>
+            </div>
+          </div>
+         
+         <br>
+          <div class="form-actions">
+          <button type="submit" class="btn btn-primary" style="width:50%">REGISTER</button></a>
+          
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+</section>
+
+
+	 
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+	</body>
+</html>
