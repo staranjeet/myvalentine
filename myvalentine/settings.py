@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ADMINS = (
@@ -26,6 +27,9 @@ SECRET_KEY = '_eoev*c(6w@pb0jwq-2tl!j6ewasd!&y+h(!_@@*#x6(yz4#3o'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']
 
@@ -72,19 +76,22 @@ STATICFILES_DIRS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-        'USER':'',
-        'PASSWORD':'',
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'crushdb',
+        'USER':'tj',
+        'PASSWORD':'gameover',
     }
+    
 }
+
+#DATABASES['default'] =  dj_database_url.config()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -118,5 +125,5 @@ STATICFILES_DIRS = (
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'loveatjss@gmail.com'
-EMAIL_HOST_PASSWORD = 'passwordincorrect'
+EMAIL_HOST_USER = 'jssatlove@gmail.com'
+EMAIL_HOST_PASSWORD = 'thisisnoteasy'

@@ -15,6 +15,11 @@
     <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
     <link href="/static/css/styles.css" rel="stylesheet">
 	</head>
+  <script>
+  function addmessage(){
+    alert('Fingers Crossed and All the Very best! Keep checking your mailbox.');
+  }
+  </script>
 	<body>
 
 <div class="container">
@@ -42,7 +47,7 @@
         <fieldset>
           
           <div class="control-group">
-            <label class="control-label" for="input01">User name</label>
+            <label class="control-label" for="input01">I am</label>
             <div class="controls">
               <input type="text" class="form-control input-xlarge" id="input01" name="name">
               
@@ -50,7 +55,7 @@
           </div>
 
           <div class="control-group">
-            <label class="control-label" for="select01">Branch</label>
+            <label class="control-label" for="select01">of branch</label>
             <div class="controls">
               <select id="select01" class="form-control" name ="branch">
                 <option>CSE</option>
@@ -67,7 +72,7 @@
           </div>
 
            <div class="control-group">
-            <label class="control-label" for="input01">Email id</label>
+            <label class="control-label" for="input01">Mail me at</label>
             <div class="controls">
               <input type="text" class="form-control input-xlarge" id="input01" name="email">
               
@@ -75,7 +80,7 @@
           </div>
          
           <div class="control-group">
-            <label class="control-label" for="input01">Crush Name</label>
+            <label class="control-label" for="input01">I like/love</label>
             <div class="controls">
               <input type="text" class="form-control input-xlarge" id="input01" name="cname">
               
@@ -83,7 +88,7 @@
           </div>
 
 <div class="control-group">
-            <label class="control-label" for="select01">Crush's Branch</label>
+            <label class="control-label" for="select01">of branch</label>
             <div class="controls">
               <select id="select01" class="form-control" name="cbranch">
                 <option>Unknown</option>
@@ -102,7 +107,7 @@
          
          <br>
           <div class="form-actions">
-          <button type="submit" class="btn btn-primary" style="width:50%">REGISTER</button></a>
+          <button type="submit" class="btn btn-primary" style="width:50%" onclick="addmessage();">REGISTER</button></a>
           
           </div>
         </fieldset>
@@ -111,9 +116,12 @@
   </div>
 
 </section>
+<p id="message">
+{% if crushexists %}
+There is a good news waiting for you in your mailbox. Go ahead and check it.
 
-
-	 
+{% endif %}
+</p> 
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>

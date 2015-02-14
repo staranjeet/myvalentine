@@ -1,0 +1,1 @@
+web: gunicorn myvalentine.wsgi --log-file -
